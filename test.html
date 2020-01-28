@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.12/angular-material.css" rel="stylesheet" />
+    <script src="https://code.angularjs.org/1.7.7/angular.js"></script>
+    <!-- By setting the version to snapshot (available for all modules), you can test with the latest master version -->
+    <!--<script src="https://code.angularjs.org/snapshot/angular.js"></script>-->
+    <script src="https://code.angularjs.org/1.7.7/angular-route.js"></script>
+    <script src="https://code.angularjs.org/1.7.7/angular-animate.js"></script>
+    <script src="https://code.angularjs.org/1.7.7/angular-sanitize.js"></script>
+    <script src="https://code.angularjs.org/1.7.7/angular-aria.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.12/angular-material.js"></script>
+    
+    <script src="js/main.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+    <p>Hello {{name}}!</p>
+    <md-input-container>
+    <label>Select  Category</label>
+      <md-select ng-model='selectModel'>
+        <md-option><em>None</em></md-option>
+        <md-option ng-repeat="x in  categories" value='x'>{{x}}</md-option>
+      </md-select>
+    </md-input-container>
+    
+  </body>
+
+</html>

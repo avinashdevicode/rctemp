@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="plunker">
 
 <head>
 
@@ -15,10 +15,20 @@
 
   <!-- Custom styles for this template -->
   <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.12/angular-material.css" rel="stylesheet"/>
+  <script src="https://code.angularjs.org/1.7.7/angular.js"></script>
+  <!-- By setting the version to snapshot (available for all modules), you can test with the latest master version -->
+  <!--<script src="https://code.angularjs.org/snapshot/angular.js"></script>-->
+  <script src="https://code.angularjs.org/1.7.7/angular-route.js"></script>
+  <script src="https://code.angularjs.org/1.7.7/angular-animate.js"></script>
+  <script src="https://code.angularjs.org/1.7.7/angular-sanitize.js"></script>
+  <script src="https://code.angularjs.org/1.7.7/angular-aria.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.12/angular-material.js"></script>
+  <script src="js/main.js"></script>
 
 </head>
 
-<body>
+<body ng-controller="MainCtrl">
 
   <div class="d-flex" id="wrapper">
 
@@ -78,18 +88,12 @@
       <td><img src="./images/RE1.png" class="img-fluid " style='height: 30%;' alt="Responsive image"></td>
       <td>
       <div class="btn-group dropright">
-  <button type="button" class="btn btn-secondary dropdown-toggle border-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-  style='background-color: #e3dfd5; color: #141414;'>
-    Good Abandonment 
-  </button>
-  <div class="dropdown-menu">
-    <a class='dropdown-item' href="#">Good Abandonment </a>
-    <a class='dropdown-item' href="#">Attractive card</a>
-    <a class='dropdown-item' href="#">Unattractive</a>
-    <a class='dropdown-item' href="#">Rich card is not relevant</a>
-    
-    <!-- Dropdown menu links -->
-  </div>
+        <md-input-container>
+          <label>Rating</label>
+          <md-select ng-model='selectRating' required aria-label="test">
+            <md-option ng-repeat="x in  richRatings" ng-value='x'>{{x}}</md-option>
+          </md-select>
+        </md-input-container>
 </div>
       
       </td>
@@ -101,18 +105,12 @@
       <td><img src="./images/RE2.png" class="img-fluid " style='height: 30%;' alt="Responsive image"></td>
       <td>
       <div class="btn-group dropright">
-  <button type="button" class="btn btn-secondary dropdown-toggle border-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-  style='background-color: #e3dfd5; color: #141414;'>
-    Attractive card
-  </button>
-  <div class="dropdown-menu">
-    <a class='dropdown-item' href="#">Good Abandonment </a>
-    <a class='dropdown-item' href="#">Attractive card</a>
-    <a class='dropdown-item' href="#">Unattractive</a>
-    <a class='dropdown-item' href="#">Rich card is not relevant</a>
-    
-    <!-- Dropdown menu links -->
-  </div>
+        <md-input-container>
+          <label>Rating</label>
+          <md-select ng-model='selectRating2' required aria-label="test">
+            <md-option ng-repeat="x in  richRatings" ng-value='x'>{{x}}</md-option>
+          </md-select>
+        </md-input-container>
 </div>
       
       </td>
@@ -123,20 +121,14 @@
       <th scope="row">3</th>
       <td><img src="./images/RE2.png" class="img-fluid " style='height: 30%;' alt="Responsive image"></td>
       <td>
-      <div class="btn-group dropright">
-  <button type="button" class="btn btn-secondary dropdown-toggle border-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-  style='background-color: #e3dfd5; color: #141414;'>
-    Rich card is not relevant
-  </button>
-  <div class="dropdown-menu">
-    <a class='dropdown-item' href="#">Good Abandonment </a>
-    <a class='dropdown-item' href="#">Attractive card</a>
-    <a class='dropdown-item' href="#">Unattractive</a>
-    <a class='dropdown-item' href="#">Rich card is not relevant</a>
-    
-    <!-- Dropdown menu links -->
-  </div>
-</div>
+        <div class="btn-group dropright">
+          <md-input-container>
+            <label>Rating</label>
+            <md-select ng-model='selectRating3' required aria-label="test">
+              <md-option ng-repeat="x in  richRatings" ng-value='x'>{{x}}</md-option>
+            </md-select>
+          </md-input-container>
+        </div>
       
       </td>
       
@@ -147,21 +139,14 @@
       <th scope="row">3</th>
       <td><strong>Overall Rating</strong></td>
       <td>
-      <div class="btn-group dropright">
-  <button type="button" class="btn btn-secondary dropdown-toggle border-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-  style='background-color: #e3dfd5; color: #141414;'>
-    Rating
-  </button>
-  <div class="dropdown-menu">
-    <a class='dropdown-item' href="#">No Richcard</a>
-    <a class='dropdown-item' href="#">O</a>
-    <a class='dropdown-item' href="#">1</a>
-    <a class='dropdown-item' href="#">2</a>
-    <a class='dropdown-item' href="#">3</a>
-    
-    <!-- Dropdown menu links -->
-  </div>
-</div>
+        <div class="btn-group dropright">
+          <md-input-container>
+            <label>Query Rating</label>
+            <md-select ng-model='selectRating4' required aria-label="test">
+              <md-option ng-repeat="x in  allRatings" ng-value='x'>{{x}}</md-option>
+            </md-select>
+          </md-input-container>
+        </div>
       
       </td>
       

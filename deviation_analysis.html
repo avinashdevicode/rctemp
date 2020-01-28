@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="plunker">
 
 <head>
 
@@ -8,17 +8,26 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Rich Card Evaluation</title>
+  <title>Deviation Analysis</title>
 
-  <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.12/angular-material.css" rel="stylesheet"/>
+  <script src="https://code.angularjs.org/1.7.7/angular.js"></script>
+  <!-- By setting the version to snapshot (available for all modules), you can test with the latest master version -->
+  <!--<script src="https://code.angularjs.org/snapshot/angular.js"></script>-->
+  <script src="https://code.angularjs.org/1.7.7/angular-route.js"></script>
+  <script src="https://code.angularjs.org/1.7.7/angular-animate.js"></script>
+  <script src="https://code.angularjs.org/1.7.7/angular-sanitize.js"></script>
+  <script src="https://code.angularjs.org/1.7.7/angular-aria.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.12/angular-material.js"></script>
+  <script src="js/main.js"></script>
 
 </head>
 
-<body>
+<body ng-controller="MainCtrl">
 
   <div class="d-flex" id="wrapper">
 
@@ -70,7 +79,7 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Richcard</th>
-      <th scope="col">Rating</th>
+      <th scope="col">Deviation Category</th>
     </tr>
   </thead>
   <tbody>
@@ -81,21 +90,17 @@
       <th scope="row">3</th>
       <td><img src="./images/RE2.png" class="img-fluid " style='height: 30%;' alt="Responsive image"></td>
       <td>
-      <div class="btn-group dropright">
-  <button type="button" class="btn btn-secondary dropdown-toggle border-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-  style='background-color: #e3dfd5; color: #141414;'>
-    Data not present
-  </button>
-  <div class="dropdown-menu">
-    <a class='dropdown-item' href="#">Data Present </a>
-    <a class='dropdown-item' href="#">Data not present</a>
-    <a class='dropdown-item' href="#">Spelling Difference</a>
-    <a class='dropdown-item' href="#">Address missmatch</a>
-    <a class='dropdown-item' href="#">Sentence Structure in wrong</a>
-    
-    <!-- Dropdown menu links -->
-  </div>
-</div>
+
+        <div class="btn-group dropright">
+          <md-input-container>
+            <label>Category</label>
+            <md-select ng-model='deviationRating' required aria-label="test">
+              <md-option ng-repeat="x in  deviationCategories" ng-value='x'>{{x}}</md-option>
+            </md-select>
+          </md-input-container>
+        </div>
+
+
       
       </td>
       
