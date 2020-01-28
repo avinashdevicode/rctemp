@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Rich Card Evaluation</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading"><p>&nbsp</p><p>&nbsp</p></div>
+      <div class="list-group list-group-flush">
+        
+        <i class='list-group-item bg-light'>Translated Query: <input type="text" class="form-control" ></input></i>
+        <i class='list-group-item bg-light'>Corrected Query: <input type="text" class="form-control" ></input></i>
+        <i class='list-group-item bg-light'>Category:
+        <div class="btn-group dropright">
+  <button type="button" class="btn btn-secondary dropdown-toggle border-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+  style='background-color: #e3dfd5; color: #141414;'>
+    Useful for process
+  </button>
+  <div class="dropdown-menu">
+    <a class='dropdown-item' href="#">Useful for process</a>
+    <a class='dropdown-item' href="#">Non Sensical</a>
+    <a class='dropdown-item' href="#">Adultry Content</a>
+    <a class='dropdown-item' href="#">Not Relevent for Analysis</a>
+    <a class='dropdown-item' href="#">Other</a>
+    
+    <!-- Dropdown menu links -->
+  </div>
+</div>
+
+        </input></i>
+
+
+        <i class='list-group-item bg-light'>Intent Name:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <div class="btn-group dropright">
+  <button type="button" class="btn btn-secondary dropdown-toggle border-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+  style='background-color: #e3dfd5; color: #141414;'>
+  Location
+  </button>
+  <div class="dropdown-menu">
+    <a class='dropdown-item' href="#">Location</a>
+    <a class='dropdown-item' href="#">Business</a>
+    <a class='dropdown-item' href="#">Food Recipes</a>
+    <a class='dropdown-item' href="#">Movies</a>
+    <a class='dropdown-item' href="#">Product</a>
+    <a class='dropdown-item' href="#">Videos</a>
+    <a class='dropdown-item' href="#">Other</a>
+    
+    <!-- Dropdown menu links -->
+  </div>
+</div>
+
+        </input></i>
+<input class="btn btn-primary" type="submit" value="Submit">
+        
+        
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+
+        <h1 class="mt-2">Query Intent </h1>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class='nav-item nav-link'><a href="./index.html">Home</a></li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Xuli Lee <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Status Info
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Profile</a>
+                <a class="dropdown-item" href="#">My Dashboard</a>
+                <a class="dropdown-item" href="#">Escalations</a>
+                <a class="dropdown-item" href="#">Policy Page</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Logout</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <div class="active-blue-3 active-blue-4 mb-4 ">
+  
+  
+</div>
+<p class="font-weight-light"> <i>Please select the category of the query and related intent.
+    </i>
+    </p>
+        <div class="w-50 p-3" >
+        <input class="form-control" type="text" placeholder="Query: Captal name china" aria-label="Search">
+        </div>
+        <img src="./images/intentQuery.png" class="img-fluid" alt="Responsive image">
+        
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+
+</html>
