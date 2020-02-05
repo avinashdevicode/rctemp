@@ -15,7 +15,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.12/angular-material.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.12/angular-material.css" rel="stylesheet" />
     <script src="https://code.angularjs.org/1.7.7/angular.js"></script>
     <!-- By setting the version to snapshot (available for all modules), you can test with the latest master version -->
     <!--<script src="https://code.angularjs.org/snapshot/angular.js"></script>-->
@@ -29,116 +29,120 @@
 
 <body ng-controller="MainCtrl">
 
-<div class="d-flex" id="wrapper">
+    <div class="d-flex" id="wrapper">
 
-    <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
-        <div class="sidebar-heading"><p>&nbsp</p>
-            <p>&nbsp</p></div>
-        <div class="list-group list-group-flush">
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">
+                <p>&nbsp</p>
+                <p>&nbsp</p>
+            </div>
+            <div class="list-group list-group-flush">
 
-            <i class='list-group-item bg-light'>Translated Query: <input type="text" class="form-control"></input></i>
-            <i class='list-group-item bg-light'>Corrected Query: <input type="text" class="form-control"></input></i>
+                <i class='list-group-item bg-light'>Translated Query: <input type="text"
+                        class="form-control"></input></i>
+                <i class='list-group-item bg-light'>Corrected Query: <input type="text"
+                        class="form-control"></input></i>
 
-            <br/>
+                <br />
+                <i class='list-group-item bg-light'>
+
+                    <md-input-container>
+                        <label>Category</label>
+                        <md-select ng-model='selectCategory' required aria-label="test">
+                            <md-option ng-repeat="x in  categories" ng-value='x'>{{x}}</md-option>
+                        </md-select>
+                    </md-input-container>
+
+                    <!-- Dropdown menu links -->
+                </i>
+
+
+                <i class='list-group-item bg-light'>
+
+
+                    <md-input-container>
+                        <label>Intent</label>
+                        <md-select ng-model='selectIntent' required aria-label="test">
+                            <md-option ng-repeat="intent in  intents" ng-value='intent'>{{intent}}</md-option>
+                        </md-select>
+                    </md-input-container>
+
+                </i>
+
+
+            </div>
+
+
             <i class='list-group-item bg-light'>
-
-                <md-input-container>
-                    <label>Category</label>
-                    <md-select ng-model='selectCategory' required aria-label="test">
-                        <md-option ng-repeat="x in  categories" ng-value='x'>{{x}}</md-option>
-                    </md-select>
-                </md-input-container>
-
-                <!-- Dropdown menu links --></i>
-
-
-            <i class='list-group-item bg-light'>
-
-
-                <md-input-container>
-                    <label>Intent</label>
-                    <md-select ng-model='selectIntent' required aria-label="test">
-                        <md-option ng-repeat="intent in  intents" ng-value='intent'>{{intent}}</md-option>
-                    </md-select>
-                </md-input-container>
+                <input class="btn btn-primary btn-lg btn-block" type="submit" value="Submit">
 
             </i>
-
-
         </div>
 
+        <!-- /#sidebar-wrapper -->
 
-        <i class='list-group-item bg-light'>
-            <input class="btn btn-primary btn-lg btn-block" type="submit" value="Submit">
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
 
-        </i>
-    </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
 
-<!-- /#sidebar-wrapper -->
+                <h1 class="mt-2">Query Intent </h1>
 
-<!-- Page Content -->
-<div id="page-content-wrapper">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class='nav-item nav-link'><a href="./index.html">Home</a></li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Xuli Lee <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Status Info
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Profile</a>
+                                <a class="dropdown-item" href="#">My Dashboard</a>
+                                <a class="dropdown-item" href="#">Escalations</a>
+                                <a class="dropdown-item" href="#">Policy Page</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <div class="container-fluid">
+                <div class="active-blue-3 active-blue-4 mb-4 ">
 
-        <h1 class="mt-2">Query Intent </h1>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                <li class='nav-item nav-link'><a href="./index.html">Home</a></li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Xuli Lee <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Status Info
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Profile</a>
-                        <a class="dropdown-item" href="#">My Dashboard</a>
-                        <a class="dropdown-item" href="#">Escalations</a>
-                        <a class="dropdown-item" href="#">Policy Page</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Logout</a>
-                    </div>
-                </li>
-            </ul>
+                </div>
+                <p class="font-weight-light"><i>Please select the category of the query and related intent.
+                    </i>
+                </p>
+                <div class="w-50 p-3">
+                    <input class="form-control" type="text" placeholder="Query: Captal de china" aria-label="Search">
+                </div>
+                <img src="./images/intentQuery.png" class="img-fluid" alt="Responsive image">
+
+            </div>
         </div>
-    </nav>
 
-    <div class="container-fluid">
-        <div class="active-blue-3 active-blue-4 mb-4 ">
+        <!-- /#page-content-wrapper -->
+        <!-- /#wrapper -->
 
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        </div>
-        <p class="font-weight-light"><i>Please select the category of the query and related intent.
-        </i>
-        </p>
-        <div class="w-50 p-3">
-            <input class="form-control" type="text" placeholder="Query: Captal name china" aria-label="Search">
-        </div>
-        <img src="./images/intentQuery.png" class="img-fluid" alt="Responsive image">
-
-    </div>
-</div>
-
-<!-- /#page-content-wrapper -->
-<!-- /#wrapper -->
-
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<!-- Menu Toggle Script -->
-<script>
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
-
-</script>
+        <!-- Menu Toggle Script -->
+        <script>
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        </script>
 
 </body>
 
